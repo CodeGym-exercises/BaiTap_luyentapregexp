@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		let pattern = /\s+/;
+		while(true){
+			let input = prompt("Nhập vào chuỗi,(exit để thoát)");
+			let nameList = input.split(pattern);
+			if(input=="exit"){
+				break;
+			}
+			alert("Chuỗi \""+ input + "\" có " + nameList.length + " từ");
+		}
+	</script>
+</body>
+</html>

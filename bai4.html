@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<p>
+		-Không có ký tự đặc biệt<br>
+		-Ký tự đầu phải là ký tự in hoa,<br>
+		-Các ký tự phía sau bao gồm ký tự bình thường, số hoặc in hoa<br>
+		-Ít nhất có 6 ký tự, nhiều nhất là 16 ký tự<br>
+
+	</p>
+	<script type="text/javascript">
+		let pattern = /^[A-Z][a-zA-Z\d]{5,15}$/;
+		/*	-Khong co ky tu dac biet
+			-Ky tu dau tien phai la ky tu in hoa,
+			-Cac ky tu phia sau phai la cac ky tu binh thuong
+				hoac in hoa, hoac la so
+			-It nhat la 6 ky tu, nhieu nhat la 16 ky tu
+		*/
+		while(true){
+			alert("-Không có ký tự đặc biệt \n"+
+				"-Ký tự đầu phải là ký tự in hoa,\n"+
+				"-Các ký tự phía sau bao gồm ký tự bình thường, số hoặc in hoa\n"+
+				"-Ít nhất có 6 ký tự, nhiều nhất là 16 ký tự")
+			let input = prompt("Nhập vào chuỗi,(exit để thoát)");
+			if(input=="exit"){
+				break;
+			}
+			if(pattern.test(input)){
+				alert("Chuỗi hợp lệ");
+			}
+			else{
+				alert("Chuỗi không hợp lệ");
+			}
+		}
+	</script>
+</body>
+</html>

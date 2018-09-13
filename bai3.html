@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		let pattern1 = /[ueoai]/;
+		let pattern2 = /[^ueoai\d\s,]/;
+
+		function demNguyenAm(str){
+			let count =0;
+			for(let i = 0;i<str.length;i++){
+				if(pattern1.test(str[i])){
+					count++;
+					console.log(str[i]);
+				}
+			}
+			return count;
+		}	
+		function demPhuAm(str){
+			let count =0;
+			for(let i = 0;i<str.length;i++){
+				if(pattern2.test(str[i])){
+					count++;
+					console.log(str[i]);
+				}
+			}
+			return count;
+		}		
+		let input = prompt("Nhập chuỗi ");
+		console.log(input+"\n"+demNguyenAm(input));
+		console.log(input+"\n"+demPhuAm(input));
+
+	</script>
+</body>
+</html>

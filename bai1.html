@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function validateDate(str){
+			let regexp = /^[\d]{1,2}\/[\d]{1,2}\/[\d]{1,4}$/;
+			if(regexp.test(str)){
+				return true;
+			}else{
+				return false;
+			}
+		}
+
+		while(true){
+			let input = prompt("Nhập vào Date,(exit để thoát)");
+			if(input=="exit"){
+				break;
+			}
+			if(validateDate(input)){
+				alert("Date_string hợp lệ");
+			}else{
+				alert("Date_string không hợp lệ");
+			}
+		}
+	</script>
+</body>
+</html>
